@@ -24,6 +24,22 @@
 		274103B12C4EC2EE007606C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		274103B42C4EC2EE007606C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		274103B62C4EC2EE007606C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		274103C22C4EC861007606C5 /* PlusJakartaSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-VariableFont_wght.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		274103C32C4EC861007606C5 /* PlusJakartaSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-ExtraLightItalic.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		274103C42C4EC861007606C5 /* PlusJakartaSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-MediumItalic.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		274103C52C4EC861007606C5 /* PlusJakartaSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-LightItalic.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		274103C62C4EC861007606C5 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-SemiBold.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		274103C72C4EC861007606C5 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-Regular.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		274103C82C4EC861007606C5 /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-ExtraLight.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		274103C92C4EC861007606C5 /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-Medium.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
+		274103CA2C4EC861007606C5 /* PlusJakartaSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-SemiBoldItalic.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		274103CB2C4EC861007606C5 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-ExtraBoldItalic.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		274103CC2C4EC861007606C5 /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-ExtraBold.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		274103CD2C4EC861007606C5 /* PlusJakartaSans-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-Italic-VariableFont_wght.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		274103CE2C4EC862007606C5 /* PlusJakartaSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-Italic.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-Italic.ttf"; sourceTree = "<group>"; };
+		274103CF2C4EC862007606C5 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-Bold.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
+		274103D02C4EC862007606C5 /* PlusJakartaSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-BoldItalic.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		274103D12C4EC862007606C5 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlusJakartaSans-Light.ttf"; path = "../../../Downloads/Plus Jakarta Sans/PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 		274103A42C4EC2E9007606C5 /* WorldOfTasteApp */ = {
 			isa = PBXGroup;
 			children = (
+				274103C12C4EC843007606C5 /* Fonts */,
 				274103BF2C4EC394007606C5 /* Services */,
 				274103BE2C4EC38E007606C5 /* Modules */,
 				274103BD2C4EC387007606C5 /* Recources */,
@@ -105,6 +122,29 @@
 				274103AE2C4EC2E9007606C5 /* WorldOfTasteApp.xcdatamodeld */,
 			);
 			path = CoreDataService;
+			sourceTree = "<group>";
+		};
+		274103C12C4EC843007606C5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				274103CF2C4EC862007606C5 /* PlusJakartaSans-Bold.ttf */,
+				274103D02C4EC862007606C5 /* PlusJakartaSans-BoldItalic.ttf */,
+				274103CC2C4EC861007606C5 /* PlusJakartaSans-ExtraBold.ttf */,
+				274103CB2C4EC861007606C5 /* PlusJakartaSans-ExtraBoldItalic.ttf */,
+				274103C82C4EC861007606C5 /* PlusJakartaSans-ExtraLight.ttf */,
+				274103C32C4EC861007606C5 /* PlusJakartaSans-ExtraLightItalic.ttf */,
+				274103CD2C4EC861007606C5 /* PlusJakartaSans-Italic-VariableFont_wght.ttf */,
+				274103CE2C4EC862007606C5 /* PlusJakartaSans-Italic.ttf */,
+				274103D12C4EC862007606C5 /* PlusJakartaSans-Light.ttf */,
+				274103C52C4EC861007606C5 /* PlusJakartaSans-LightItalic.ttf */,
+				274103C92C4EC861007606C5 /* PlusJakartaSans-Medium.ttf */,
+				274103C42C4EC861007606C5 /* PlusJakartaSans-MediumItalic.ttf */,
+				274103C72C4EC861007606C5 /* PlusJakartaSans-Regular.ttf */,
+				274103C62C4EC861007606C5 /* PlusJakartaSans-SemiBold.ttf */,
+				274103CA2C4EC861007606C5 /* PlusJakartaSans-SemiBoldItalic.ttf */,
+				274103C22C4EC861007606C5 /* PlusJakartaSans-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
