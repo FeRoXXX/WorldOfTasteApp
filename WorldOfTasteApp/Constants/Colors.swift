@@ -14,4 +14,5 @@ enum Colors {
     static let activeElementTintColor: UIColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 0.9725490196, alpha: 1)
     static let pageControlActiveColor: UIColor = #colorLiteral(red: 0.3529411765, green: 0.4470588235, blue: 0.2901960784, alpha: 1)
     static let pageControlInactiveColor: UIColor = #colorLiteral(red: 0.737254902, green: 0.8862745098, blue: 0.6392156863, alpha: 1)
+    static let descriptionTextColor: UIColor = #colorLiteral(red: 0.2901960784, green: 0.2901960784, blue: 0.2901960784, alpha: 1)
 }
