@@ -7,6 +7,18 @@
 
 import UIKit
 
+fileprivate struct SizeSettings {
+    let topFrameMark: CGSize
+    let bottomFrameMark: CGSize
+    let centerFrameMark: CGSize
+    let frameWidth: CGFloat
+    let frameHeight: CGFloat
+    let centerLeftMark: CGFloat
+    let centerTopMark: CGFloat
+    let widthPadding: CGFloat = 16
+    let heighPadding: CGFloat = 25
+}
+
 final class LogoView: UIView {
     
     fileprivate var lineLayer = CAShapeLayer()
@@ -54,7 +66,7 @@ final class LogoView: UIView {
         firstTextLayer.fontSize = 10
         firstTextLayer.alignmentMode = .center
         
-        logoTextLayer.fontSize = 60 - (baseLogoScale - frame.width)
+        logoTextLayer.fontSize = 50 - (baseLogoScale - frame.width)
         logoTextLayer.alignmentMode = .center
         
         secondTextLayer.fontSize = 14
@@ -165,16 +177,4 @@ final class LogoView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-}
-
-fileprivate struct SizeSettings {
-    let topFrameMark: CGSize
-    let bottomFrameMark: CGSize
-    let centerFrameMark: CGSize
-    let frameWidth: CGFloat
-    let frameHeight: CGFloat
-    let centerLeftMark: CGFloat
-    let centerTopMark: CGFloat
-    let widthPadding: CGFloat = 16
-    let heighPadding: CGFloat = 25
 }

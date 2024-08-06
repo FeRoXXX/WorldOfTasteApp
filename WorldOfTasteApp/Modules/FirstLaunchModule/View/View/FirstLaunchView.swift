@@ -17,7 +17,7 @@ final class FirstLaunchView: UIView {
         logoView.lineColor = #colorLiteral(red: 0.5215686275, green: 0.631372549, blue: 0.4509803922, alpha: 1)
         logoView.textColor = #colorLiteral(red: 0.3529411765, green: 0.4470588235, blue: 0.2901960784, alpha: 1)
         logoView.firstText = "Herbs & Spices"
-        logoView.logoText = "OLDMIX"
+        logoView.logoText = "МИР ВКУСА"
         logoView.secondText = "Quality"
         logoView.translatesAutoresizingMaskIntoConstraints = false
         return logoView
@@ -52,7 +52,6 @@ final class FirstLaunchView: UIView {
         let aboutPageText: UILabel = UILabel()
         aboutPageText.font = Fonts.largeFont
         aboutPageText.numberOfLines = 0
-        aboutPageText.text = "Fancy Another Blast Of Feel-Good Flavors?"
         aboutPageText.textColor = Colors.activeElementColor
         aboutPageText.translatesAutoresizingMaskIntoConstraints = false
         return aboutPageText
@@ -60,7 +59,6 @@ final class FirstLaunchView: UIView {
     
     private let fullDescriptionText: UILabel = {
         let fullDescriptionText: UILabel = UILabel()
-        fullDescriptionText.text = "Old Mix helps you to find authentic herbs and spices bursting with flavours while brimming your confidence."
         fullDescriptionText.font = Fonts.mediumFont
         fullDescriptionText.numberOfLines = 0
         fullDescriptionText.textColor = Colors.descriptionTextColor
@@ -97,6 +95,13 @@ final class FirstLaunchView: UIView {
     
     func setCurrentPage(number: Int) {
         pageControl.currentPage = number
+    }
+    
+    func setupData(_ data: [Page]) {
+        aboutPageText.attributedText = createAttributedString(from: data[0].string, 
+                                                              with: data[0].runs)
+        fullDescriptionText.attributedText = createAttributedString(from: data[1].string,
+                                                                    with: data[1].runs)
     }
 }
 
@@ -152,5 +157,34 @@ private extension FirstLaunchView {
                                                    constant: 21),
             textStackView.heightAnchor.constraint(equalToConstant: 189)
         ])
+    }
+    
+    func createAttributedString(from string: String, with runs: [Run]) -> NSMutableAttributedString {
+        let attributedString = NSMutableAttributedString(string: string)
+        
+        for run in runs {
+            let range = NSRange(location: run.range[0], length: run.range[1])
+            var attributes: [NSAttributedString.Key: Any] = [:]
+            
+            let fontName = run.attributes.font.name
+            let fontSize = CGFloat(run.attributes.font.size)
+            if let font = UIFont(name: fontName, size: fontSize) {
+                attributes[.font] = font
+            }
+            
+            if run.attributes.color.count == 3 {
+                let color = UIColor(
+                    red: CGFloat(run.attributes.color[0]) / 255.0,
+                    green: CGFloat(run.attributes.color[1]) / 255.0,
+                    blue: CGFloat(run.attributes.color[2]) / 255.0,
+                    alpha: 1.0
+                )
+                attributes[.foregroundColor] = color
+            }
+            
+            attributedString.addAttributes(attributes, range: range)
+        }
+        
+        return attributedString
     }
 }
