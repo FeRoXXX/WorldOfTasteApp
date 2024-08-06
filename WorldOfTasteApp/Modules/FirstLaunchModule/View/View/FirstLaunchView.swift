@@ -10,7 +10,10 @@ import UIKit
 final class FirstLaunchView: UIView {
     
     private let logoView: LogoView = {
-        let logoView = LogoView(frame: CGRect(x: 0, y: 0, width: 317, height: 96))
+        let logoView = LogoView(frame: CGRect(x: 0, 
+                                              y: 0,
+                                              width: 317,
+                                              height: 96))
         logoView.lineColor = #colorLiteral(red: 0.5215686275, green: 0.631372549, blue: 0.4509803922, alpha: 1)
         logoView.textColor = #colorLiteral(red: 0.3529411765, green: 0.4470588235, blue: 0.2901960784, alpha: 1)
         logoView.firstText = "Herbs & Spices"
@@ -29,7 +32,8 @@ final class FirstLaunchView: UIView {
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 3
-        pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        pageControl.transform = CGAffineTransform(scaleX: 1.5, 
+                                                  y: 1.5)
         pageControl.currentPageIndicatorTintColor = Colors.pageControlActiveColor
         pageControl.pageIndicatorTintColor = Colors.pageControlInactiveColor
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +69,12 @@ final class FirstLaunchView: UIView {
     }()
     
     private let progressButton: ProgressButton = {
-        let progress = ProgressButton(frame: CGRect(x: 0, y: 0, width: 86, height: 86), lineWidth: 5, rounded: true)
+        let progress = ProgressButton(frame: CGRect(x: 0, 
+                                                    y: 0,
+                                                    width: 86,
+                                                    height: 86),
+                                      lineWidth: 5,
+                                      rounded: true)
         progress.buttonColor = Colors.activeElementColor
         progress.buttonImage = Images.SystemImages.arrowRight
         progress.imageColor = Colors.activeElementTintColor
@@ -112,21 +121,35 @@ private extension FirstLaunchView {
             logoView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             logoView.widthAnchor.constraint(equalToConstant: 317),
             logoView.topAnchor.constraint(equalTo: self.topAnchor, constant: 53),
-            logoView.heightAnchor.constraint(equalToConstant: 96),
+            logoView.heightAnchor.constraint(equalToConstant: 96)
+        ])
+        NSLayoutConstraint.activate([
             secondImageView.heightAnchor.constraint(equalToConstant: 340),
             secondImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            secondImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 44),
-            secondImageView.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 22),
-            pageControl.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            secondImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, 
+                                                     constant: 44),
+            secondImageView.topAnchor.constraint(equalTo: logoView.bottomAnchor, 
+                                                 constant: 22)
+        ])
+        NSLayoutConstraint.activate([
+            pageControl.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, 
+                                                constant: -10),
             pageControl.leftAnchor.constraint(equalTo: self.leftAnchor),
-            pageControl.heightAnchor.constraint(equalToConstant: 15),
+            pageControl.heightAnchor.constraint(equalToConstant: 15)
+        ])
+        NSLayoutConstraint.activate([
             progressButton.centerYAnchor.constraint(equalTo: pageControl.centerYAnchor),
-            progressButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -21),
+            progressButton.rightAnchor.constraint(equalTo: self.rightAnchor, 
+                                                  constant: -21),
             progressButton.heightAnchor.constraint(equalToConstant: 86),
-            progressButton.widthAnchor.constraint(equalToConstant: 86),
-            textStackView.bottomAnchor.constraint(equalTo: progressButton.topAnchor, constant: -8),
+            progressButton.widthAnchor.constraint(equalToConstant: 86)
+        ])
+        NSLayoutConstraint.activate([
+            textStackView.bottomAnchor.constraint(equalTo: progressButton.topAnchor, 
+                                                  constant: -8),
             textStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            textStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 21),
+            textStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, 
+                                                   constant: 21),
             textStackView.heightAnchor.constraint(equalToConstant: 189)
         ])
     }
