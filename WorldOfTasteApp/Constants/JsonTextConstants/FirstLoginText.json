@@ -1,0 +1,193 @@
+{
+  "data": [
+    {
+      "page": [
+        {
+          "type": "first_info",
+          "string": "Актуальный ассортимент",
+          "runs": [
+            {
+              "range": [0, 21],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-ExtraBold",
+                  "size": 32
+                },
+                "color": [90, 114, 74]
+              }
+            }
+          ]
+        },
+        {
+          "type": "description",
+          "string": "Ассортимент формируется с учетом современных тенденций рынка и потребностей постоянных клиентов",
+          "runs": [
+            {
+              "range": [0, 10],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [25, 12],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [49, 9],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [62, 20],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": [
+        {
+          "type": "first_info",
+          "string": "Поставляем пищевые добавки более 12 лет",
+          "runs": [
+            {
+              "range": [0, 31],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-ExtraBold",
+                  "size": 32
+                },
+                "color": [90, 114, 74]
+              }
+            }
+          ]
+        },
+        {
+          "type": "description",
+          "string": "Мы реализуем пищевые ингредиенты стабильного качества на мясо- и птицеперерабатывающие производства с 2010 года.",
+          "runs": [
+            {
+              "range": [3, 19],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [23, 19],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [53, 32],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": [
+        {
+          "type": "first_info",
+          "string": "Предоставление логистики",
+          "runs": [
+            {
+              "range": [0, 21],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-ExtraBold",
+                  "size": 32
+                },
+                "color": [90, 114, 74]
+              }
+            }
+          ]
+        },
+        {
+          "type": "description",
+          "string": "Доставим продукцию по всей России. Сроки доставки обговариваются индивидуально",
+          "runs": [
+            {
+              "range": [0, 7],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [8, 9],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [21, 6],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            },
+            {
+              "range": [45, 12],
+              "attributes": {
+                "font": {
+                  "name": "PlusJakartaSans-Regular",
+                  "size": 17
+                },
+                "color": [90, 114, 74]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
