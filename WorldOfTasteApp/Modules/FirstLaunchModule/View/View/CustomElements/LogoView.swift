@@ -59,37 +59,15 @@ final class LogoView: UIView {
         
         secondTextLayer.fontSize = 14
         secondTextLayer.alignmentMode = .center
-        let topFrameMark = firstTextLayer.preferredFrameSize()
-        let bottomFrameMark = secondTextLayer.preferredFrameSize()
-        let centerFrameMark = logoTextLayer.preferredFrameSize()
-        let frameWidth = frame.width
-        let frameHeight = frame.height
-        let centerLeftMark = frameWidth/2 - topFrameMark.width/2
-        let centerTopMark = topFrameMark.height/2
-        let widthPadding: CGFloat = 16
-        let heighPadding: CGFloat = 25
-        
-        path.move(to: CGPoint(x: centerLeftMark, y: centerTopMark))
-        path.addLine(to: CGPoint(x: widthPadding, y: centerTopMark))
-        path.move(to: CGPoint(x: widthPadding, y: centerTopMark))
-        path.addQuadCurve(to: CGPoint(x: 0, y: heighPadding), controlPoint: CGPoint(x: 0, y: centerTopMark))
-        path.move(to: CGPoint(x: 0, y: heighPadding))
-        path.addLine(to: CGPoint(x: 0, y: frameHeight - heighPadding))
-        path.move(to: CGPoint(x: 0, y: frameHeight - heighPadding))
-        path.addQuadCurve(to: CGPoint(x: widthPadding, y: frameHeight - centerTopMark), controlPoint: CGPoint(x: 0, y: frameHeight - centerTopMark))
-        path.move(to: CGPoint(x: widthPadding, y: frameHeight - centerTopMark))
-        path.addLine(to: CGPoint(x: centerLeftMark, y: frameHeight - centerTopMark))
-        
-        path.move(to: CGPoint(x: frameWidth - centerLeftMark, y: centerTopMark))
-        path.addLine(to: CGPoint(x: frameWidth - widthPadding, y: centerTopMark))
-        path.move(to: CGPoint(x: frameWidth - centerLeftMark, y: frameHeight - centerTopMark))
-        path.addLine(to: CGPoint(x: frameWidth - widthPadding, y: frameHeight - centerTopMark))
-        path.move(to: CGPoint(x: frameWidth, y: heighPadding))
-        path.addLine(to: CGPoint(x: frameWidth, y: frameHeight - heighPadding))
-        path.move(to: CGPoint(x: frameWidth - widthPadding, y: centerTopMark))
-        path.addQuadCurve(to: CGPoint(x: frameWidth, y: heighPadding), controlPoint: CGPoint(x: frameWidth, y: centerTopMark))
-        path.move(to: CGPoint(x: frameWidth, y: frameHeight - heighPadding))
-        path.addQuadCurve(to: CGPoint(x: frameWidth - widthPadding, y: frameHeight - centerTopMark), controlPoint: CGPoint(x: frameWidth, y: frameHeight - centerTopMark))
+        let sizeSettings = SizeSettings(topFrameMark: firstTextLayer.preferredFrameSize(),
+                                        bottomFrameMark: secondTextLayer.preferredFrameSize(),
+                                        centerFrameMark: logoTextLayer.preferredFrameSize(),
+                                        frameWidth: frame.width,
+                                        frameHeight: frame.height,
+                                        centerLeftMark: frame.width/2 - firstTextLayer.preferredFrameSize().width/2,
+                                        centerTopMark: firstTextLayer.preferredFrameSize().height/2)
+        createLeftElement(settings: sizeSettings)
+        createRightElement(settings: sizeSettings)
         lineLayer.fillColor = UIColor.blue.cgColor
         
         lineLayer.path = path.cgPath
@@ -99,12 +77,80 @@ final class LogoView: UIView {
         
         lineLayer.strokeEnd = 1
         layer.addSublayer(lineLayer)
-        firstTextLayer.frame = CGRect(x: centerLeftMark, y: 0, width: topFrameMark.width, height: topFrameMark.height)
+        
+        createTextLayers(settings: sizeSettings)
         layer.addSublayer(firstTextLayer)
-        logoTextLayer.frame = CGRect(x: (frameWidth - centerFrameMark.width)/2, y: (frameHeight - centerFrameMark.height)/2, width: centerFrameMark.width, height: centerFrameMark.height)
         layer.addSublayer(logoTextLayer)
-        secondTextLayer.frame = CGRect(x: centerLeftMark, y: frameHeight - bottomFrameMark.height, width: topFrameMark.width, height: bottomFrameMark.height)
         layer.addSublayer(secondTextLayer)
+    }
+    
+    fileprivate func createLeftElement(settings: SizeSettings) {
+        path.move(to: CGPoint(x: settings.centerLeftMark, 
+                              y: settings.centerTopMark))
+        path.addLine(to: CGPoint(x: settings.widthPadding, 
+                                 y: settings.centerTopMark))
+        path.move(to: CGPoint(x: settings.widthPadding, 
+                              y: settings.centerTopMark))
+        path.addQuadCurve(to: CGPoint(x: 0, 
+                                      y: settings.heighPadding), 
+                          controlPoint: CGPoint(x: 0,
+                                                y: settings.centerTopMark))
+        path.move(to: CGPoint(x: 0, 
+                              y: settings.heighPadding))
+        path.addLine(to: CGPoint(x: 0, 
+                                 y: settings.frameHeight - settings.heighPadding))
+        path.move(to: CGPoint(x: 0, 
+                              y: settings.frameHeight - settings.heighPadding))
+        path.addQuadCurve(to: CGPoint(x: settings.widthPadding, 
+                                      y: settings.frameHeight - settings.centerTopMark), 
+                          controlPoint: CGPoint(x: 0,
+                                                y: settings.frameHeight - settings.centerTopMark))
+        path.move(to: CGPoint(x: settings.widthPadding, 
+                              y: settings.frameHeight - settings.centerTopMark))
+        path.addLine(to: CGPoint(x: settings.centerLeftMark, 
+                                 y: settings.frameHeight - settings.centerTopMark))
+    }
+    
+    fileprivate func createRightElement(settings: SizeSettings) {
+        path.move(to: CGPoint(x: settings.frameWidth - settings.centerLeftMark,
+                              y: settings.centerTopMark))
+        path.addLine(to: CGPoint(x: settings.frameWidth - settings.widthPadding,
+                                 y: settings.centerTopMark))
+        path.move(to: CGPoint(x: settings.frameWidth - settings.centerLeftMark,
+                              y: settings.frameHeight - settings.centerTopMark))
+        path.addLine(to: CGPoint(x: settings.frameWidth - settings.widthPadding,
+                                 y: settings.frameHeight - settings.centerTopMark))
+        path.move(to: CGPoint(x: settings.frameWidth,
+                              y: settings.heighPadding))
+        path.addLine(to: CGPoint(x: settings.frameWidth,
+                                 y: settings.frameHeight - settings.heighPadding))
+        path.move(to: CGPoint(x: settings.frameWidth - settings.widthPadding,
+                              y: settings.centerTopMark))
+        path.addQuadCurve(to: CGPoint(x: settings.frameWidth,
+                                      y: settings.heighPadding),
+                          controlPoint: CGPoint(x: settings.frameWidth,
+                                                y: settings.centerTopMark))
+        path.move(to: CGPoint(x: settings.frameWidth,
+                              y: settings.frameHeight - settings.heighPadding))
+        path.addQuadCurve(to: CGPoint(x: settings.frameWidth - settings.widthPadding,
+                                      y: settings.frameHeight - settings.centerTopMark),
+                          controlPoint: CGPoint(x: settings.frameWidth,
+                                                y: settings.frameHeight - settings.centerTopMark))
+    }
+    
+    fileprivate func createTextLayers(settings: SizeSettings) {
+        firstTextLayer.frame = CGRect(x: settings.centerLeftMark,
+                                      y: 0,
+                                      width: settings.topFrameMark.width,
+                                      height: settings.topFrameMark.height)
+        logoTextLayer.frame = CGRect(x: (settings.frameWidth - settings.centerFrameMark.width)/2,
+                                     y: (settings.frameHeight - settings.centerFrameMark.height)/2,
+                                     width: settings.centerFrameMark.width,
+                                     height: settings.centerFrameMark.height)
+        secondTextLayer.frame = CGRect(x: settings.centerLeftMark,
+                                       y: settings.frameHeight - settings.bottomFrameMark.height,
+                                       width: settings.topFrameMark.width,
+                                       height: settings.bottomFrameMark.height)
     }
     
     override func layoutSubviews() {
@@ -119,5 +165,16 @@ final class LogoView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
+}
+
+fileprivate struct SizeSettings {
+    let topFrameMark: CGSize
+    let bottomFrameMark: CGSize
+    let centerFrameMark: CGSize
+    let frameWidth: CGFloat
+    let frameHeight: CGFloat
+    let centerLeftMark: CGFloat
+    let centerTopMark: CGFloat
+    let widthPadding: CGFloat = 16
+    let heighPadding: CGFloat = 25
 }
