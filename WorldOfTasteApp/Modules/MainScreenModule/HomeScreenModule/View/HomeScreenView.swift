@@ -1,5 +1,5 @@
 //
-//  MarketScreenView.swift
+//  HomeScreenView.swift
 //  WorldOfTasteApp
 //
 //  Created by Vyacheslav on 06.08.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MarketScreenView: UIView {
+final class HomeScreenView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11ECDD772C623547000AA659 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD762C623547000AA659 /* HomeViewController.swift */; };
-		11ECDD792C623667000AA659 /* MarketScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD782C623667000AA659 /* MarketScreenView.swift */; };
+		11ECDD792C623667000AA659 /* HomeScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD782C623667000AA659 /* HomeScreenView.swift */; };
 		11ECDD7B2C623793000AA659 /* MenuTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD7A2C623793000AA659 /* MenuTabBarController.swift */; };
 		11ECDD822C625479000AA659 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD812C625479000AA659 /* WishListViewController.swift */; };
 		11ECDD862C6254C5000AA659 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD852C6254C5000AA659 /* PlayViewController.swift */; };
@@ -46,7 +46,7 @@
 
 /* Begin PBXFileReference section */
 		11ECDD762C623547000AA659 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		11ECDD782C623667000AA659 /* MarketScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketScreenView.swift; sourceTree = "<group>"; };
+		11ECDD782C623667000AA659 /* HomeScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenView.swift; sourceTree = "<group>"; };
 		11ECDD7A2C623793000AA659 /* MenuTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTabBarController.swift; sourceTree = "<group>"; };
 		11ECDD812C625479000AA659 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		11ECDD852C6254C5000AA659 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		11ECDD752C62350B000AA659 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				11ECDD782C623667000AA659 /* MarketScreenView.swift */,
+				11ECDD782C623667000AA659 /* HomeScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -439,7 +439,7 @@
 				274103DD2C510B63007606C5 /* Colors.swift in Sources */,
 				274103A82C4EC2E9007606C5 /* SceneDelegate.swift in Sources */,
 				274103DF2C51120D007606C5 /* FirstLaunchPageViewController.swift in Sources */,
-				11ECDD792C623667000AA659 /* MarketScreenView.swift in Sources */,
+				11ECDD792C623667000AA659 /* HomeScreenView.swift in Sources */,
 				11ECDD882C6254EA000AA659 /* AccountViewController.swift in Sources */,
 				11ECDD862C6254C5000AA659 /* PlayViewController.swift in Sources */,
 				274103E12C54C94A007606C5 /* Images.swift in Sources */,
