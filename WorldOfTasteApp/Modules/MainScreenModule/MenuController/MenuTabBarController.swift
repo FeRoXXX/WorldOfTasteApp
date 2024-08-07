@@ -32,7 +32,17 @@ private extension MenuTabBarController {
         accountController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Account"), tag: 0)
         
         setViewControllers([homeController, wishListController, playController, accountController], animated: false)
-
+        
+        tabBar.itemWidth = 30.0
+        tabBar.tintColor = .white
+        tabBar.unselectedItemTintColor = .white
+        tabBar.itemPositioning = .centered
+        tabBar.itemSpacing = 50.0
+        
+        setTabBarStyle()
+    }
+    
+    func setTabBarStyle() {
         let layer = CAShapeLayer()
         layer.path = UIBezierPath(roundedRect: CGRect(x: 30,
                                                       y: tabBar.bounds.minY - 15,
@@ -51,11 +61,5 @@ private extension MenuTabBarController {
                 item.imageInsets = UIEdgeInsets(top: -10, left: 0, bottom: 0, right: 0)
             }
         }
-        
-        tabBar.itemWidth = 30.0
-        tabBar.tintColor = .white
-        tabBar.unselectedItemTintColor = .white
-        tabBar.itemPositioning = .centered
-        tabBar.itemSpacing = 50.0
     }
 }
