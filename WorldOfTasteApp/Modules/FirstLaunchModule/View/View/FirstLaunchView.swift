@@ -10,11 +10,14 @@ import UIKit
 final class FirstLaunchView: UIView {
     
     private let logoView: LogoView = {
-        let logoView = LogoView(frame: CGRect(x: 0, y: 0, width: 317, height: 96))
+        let logoView = LogoView(frame: CGRect(x: 0, 
+                                              y: 0,
+                                              width: 317,
+                                              height: 96))
         logoView.lineColor = #colorLiteral(red: 0.5215686275, green: 0.631372549, blue: 0.4509803922, alpha: 1)
         logoView.textColor = #colorLiteral(red: 0.3529411765, green: 0.4470588235, blue: 0.2901960784, alpha: 1)
         logoView.firstText = "Herbs & Spices"
-        logoView.logoText = "OLDMIX"
+        logoView.logoText = "МИР ВКУСА"
         logoView.secondText = "Quality"
         logoView.translatesAutoresizingMaskIntoConstraints = false
         return logoView
@@ -29,7 +32,8 @@ final class FirstLaunchView: UIView {
     private let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.numberOfPages = 3
-        pageControl.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+        pageControl.transform = CGAffineTransform(scaleX: 1.5, 
+                                                  y: 1.5)
         pageControl.currentPageIndicatorTintColor = Colors.pageControlActiveColor
         pageControl.pageIndicatorTintColor = Colors.pageControlInactiveColor
         pageControl.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +52,6 @@ final class FirstLaunchView: UIView {
         let aboutPageText: UILabel = UILabel()
         aboutPageText.font = Fonts.largeFont
         aboutPageText.numberOfLines = 0
-        aboutPageText.text = "Fancy Another Blast Of Feel-Good Flavors?"
         aboutPageText.textColor = Colors.activeElementColor
         aboutPageText.translatesAutoresizingMaskIntoConstraints = false
         return aboutPageText
@@ -56,7 +59,6 @@ final class FirstLaunchView: UIView {
     
     private let fullDescriptionText: UILabel = {
         let fullDescriptionText: UILabel = UILabel()
-        fullDescriptionText.text = "Old Mix helps you to find authentic herbs and spices bursting with flavours while brimming your confidence."
         fullDescriptionText.font = Fonts.mediumFont
         fullDescriptionText.numberOfLines = 0
         fullDescriptionText.textColor = Colors.descriptionTextColor
@@ -65,7 +67,12 @@ final class FirstLaunchView: UIView {
     }()
     
     private let progressButton: ProgressButton = {
-        let progress = ProgressButton(frame: CGRect(x: 0, y: 0, width: 86, height: 86), lineWidth: 5, rounded: true)
+        let progress = ProgressButton(frame: CGRect(x: 0, 
+                                                    y: 0,
+                                                    width: 86,
+                                                    height: 86),
+                                      lineWidth: 5,
+                                      rounded: true)
         progress.buttonColor = Colors.activeElementColor
         progress.buttonImage = Images.SystemImages.arrowRight
         progress.imageColor = Colors.activeElementTintColor
@@ -88,6 +95,13 @@ final class FirstLaunchView: UIView {
     
     func setCurrentPage(number: Int) {
         pageControl.currentPage = number
+    }
+    
+    func setupData(_ data: [Page]) {
+        aboutPageText.attributedText = createAttributedString(from: data[0].string, 
+                                                              with: data[0].runs)
+        fullDescriptionText.attributedText = createAttributedString(from: data[1].string,
+                                                                    with: data[1].runs)
     }
 }
 
@@ -112,22 +126,65 @@ private extension FirstLaunchView {
             logoView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             logoView.widthAnchor.constraint(equalToConstant: 317),
             logoView.topAnchor.constraint(equalTo: self.topAnchor, constant: 53),
-            logoView.heightAnchor.constraint(equalToConstant: 96),
+            logoView.heightAnchor.constraint(equalToConstant: 96)
+        ])
+        NSLayoutConstraint.activate([
             secondImageView.heightAnchor.constraint(equalToConstant: 340),
             secondImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            secondImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 44),
-            secondImageView.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 22),
-            pageControl.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            secondImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, 
+                                                     constant: 44),
+            secondImageView.topAnchor.constraint(equalTo: logoView.bottomAnchor, 
+                                                 constant: 22)
+        ])
+        NSLayoutConstraint.activate([
+            pageControl.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, 
+                                                constant: -10),
             pageControl.leftAnchor.constraint(equalTo: self.leftAnchor),
-            pageControl.heightAnchor.constraint(equalToConstant: 15),
+            pageControl.heightAnchor.constraint(equalToConstant: 15)
+        ])
+        NSLayoutConstraint.activate([
             progressButton.centerYAnchor.constraint(equalTo: pageControl.centerYAnchor),
-            progressButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -21),
+            progressButton.rightAnchor.constraint(equalTo: self.rightAnchor, 
+                                                  constant: -21),
             progressButton.heightAnchor.constraint(equalToConstant: 86),
-            progressButton.widthAnchor.constraint(equalToConstant: 86),
-            textStackView.bottomAnchor.constraint(equalTo: progressButton.topAnchor, constant: -8),
+            progressButton.widthAnchor.constraint(equalToConstant: 86)
+        ])
+        NSLayoutConstraint.activate([
+            textStackView.bottomAnchor.constraint(equalTo: progressButton.topAnchor, 
+                                                  constant: -8),
             textStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            textStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 21),
+            textStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, 
+                                                   constant: 21),
             textStackView.heightAnchor.constraint(equalToConstant: 189)
         ])
+    }
+    
+    func createAttributedString(from string: String, with runs: [Run]) -> NSMutableAttributedString {
+        let attributedString = NSMutableAttributedString(string: string)
+        
+        for run in runs {
+            let range = NSRange(location: run.range[0], length: run.range[1])
+            var attributes: [NSAttributedString.Key: Any] = [:]
+            
+            let fontName = run.attributes.font.name
+            let fontSize = CGFloat(run.attributes.font.size)
+            if let font = UIFont(name: fontName, size: fontSize) {
+                attributes[.font] = font
+            }
+            
+            if run.attributes.color.count == 3 {
+                let color = UIColor(
+                    red: CGFloat(run.attributes.color[0]) / 255.0,
+                    green: CGFloat(run.attributes.color[1]) / 255.0,
+                    blue: CGFloat(run.attributes.color[2]) / 255.0,
+                    alpha: 1.0
+                )
+                attributes[.foregroundColor] = color
+            }
+            
+            attributedString.addAttributes(attributes, range: range)
+        }
+        
+        return attributedString
     }
 }

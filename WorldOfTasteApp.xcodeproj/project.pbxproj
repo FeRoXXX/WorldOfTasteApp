@@ -42,6 +42,9 @@
 		274104382C6225B1007606C5 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 274104282C6225B1007606C5 /* PlusJakartaSans-SemiBoldItalic.ttf */; };
 		274104392C6225B1007606C5 /* PlusJakartaSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 274104292C6225B1007606C5 /* PlusJakartaSans-ExtraBoldItalic.ttf */; };
 		2741043A2C6225B1007606C5 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2741042A2C6225B1007606C5 /* PlusJakartaSans-SemiBold.ttf */; };
+		2741043E2C624278007606C5 /* FirstLoginText.json in Resources */ = {isa = PBXBuildFile; fileRef = 2741043D2C624278007606C5 /* FirstLoginText.json */; };
+		274104402C624881007606C5 /* PageTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2741043F2C624881007606C5 /* PageTextModel.swift */; };
+		274104432C62496C007606C5 /* FirstLaunchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274104422C62496C007606C5 /* FirstLaunchDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +85,9 @@
 		274104282C6225B1007606C5 /* PlusJakartaSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		274104292C6225B1007606C5 /* PlusJakartaSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		2741042A2C6225B1007606C5 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		2741043D2C624278007606C5 /* FirstLoginText.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FirstLoginText.json; sourceTree = "<group>"; };
+		2741043F2C624881007606C5 /* PageTextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTextModel.swift; sourceTree = "<group>"; };
+		274104422C62496C007606C5 /* FirstLaunchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLaunchDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +301,7 @@
 		274103D22C510A16007606C5 /* FirstLaunchModule */ = {
 			isa = PBXGroup;
 			children = (
+				274104412C624950007606C5 /* DataManager */,
 				274103D32C510A2B007606C5 /* View */,
 			);
 			path = FirstLaunchModule;
@@ -314,6 +321,7 @@
 			children = (
 				274103E22C54CF3B007606C5 /* CustomElements */,
 				274103D62C510A4B007606C5 /* FirstLaunchView.swift */,
+				2741043F2C624881007606C5 /* PageTextModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 		274103DA2C510B41007606C5 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				2741043C2C6241F4007606C5 /* JsonTextConstants */,
 				274103DC2C510B63007606C5 /* Colors.swift */,
 				274103E02C54C94A007606C5 /* Images.swift */,
 				274103F52C593A1F007606C5 /* Fonts.swift */,
@@ -344,6 +353,22 @@
 				274104192C6136F7007606C5 /* LogoView.swift */,
 			);
 			path = CustomElements;
+			sourceTree = "<group>";
+		};
+		2741043C2C6241F4007606C5 /* JsonTextConstants */ = {
+			isa = PBXGroup;
+			children = (
+				2741043D2C624278007606C5 /* FirstLoginText.json */,
+			);
+			path = JsonTextConstants;
+			sourceTree = "<group>";
+		};
+		274104412C624950007606C5 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				274104422C62496C007606C5 /* FirstLaunchDataManager.swift */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +431,7 @@
 			files = (
 				2741042C2C6225B1007606C5 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
 				274104382C6225B1007606C5 /* PlusJakartaSans-SemiBoldItalic.ttf in Resources */,
+				2741043E2C624278007606C5 /* FirstLoginText.json in Resources */,
 				274104312C6225B1007606C5 /* PlusJakartaSans-Regular.ttf in Resources */,
 				274104362C6225B1007606C5 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				2741042D2C6225B1007606C5 /* PlusJakartaSans-Italic.ttf in Resources */,
@@ -434,6 +460,7 @@
 			files = (
 				274103D72C510A4B007606C5 /* FirstLaunchView.swift in Sources */,
 				11ECDD822C625479000AA659 /* WishListViewController.swift in Sources */,
+				274104402C624881007606C5 /* PageTextModel.swift in Sources */,
 				274103A62C4EC2E9007606C5 /* AppDelegate.swift in Sources */,
 				2741041A2C6136F7007606C5 /* LogoView.swift in Sources */,
 				274103DD2C510B63007606C5 /* Colors.swift in Sources */,
@@ -446,6 +473,7 @@
 				274103F62C593A1F007606C5 /* Fonts.swift in Sources */,
 				11ECDD772C623547000AA659 /* HomeViewController.swift in Sources */,
 				274103E42C54CF51007606C5 /* ProgressButton.swift in Sources */,
+				274104432C62496C007606C5 /* FirstLaunchDataManager.swift in Sources */,
 				274103D92C510A5C007606C5 /* FirstLaunchViewController.swift in Sources */,
 				11ECDD7B2C623793000AA659 /* MenuTabBarController.swift in Sources */,
 				274103B02C4EC2E9007606C5 /* WorldOfTasteApp.xcdatamodeld in Sources */,
