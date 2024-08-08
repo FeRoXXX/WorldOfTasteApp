@@ -1,5 +1,5 @@
 //
-//  FirstLaunchView.swift
+//  OnboardingView.swift
 //  WorldOfTasteApp
 //
 //  Created by Александр Федоткин on 24.07.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FirstLaunchView: UIView {
+final class OnboardingView: UIView {
     
     private let logoView: LogoView = {
         let logoView = LogoView(frame: CGRect(x: 0, 
@@ -24,7 +24,7 @@ final class FirstLaunchView: UIView {
     }()
     
     private let secondImageView: UIImageView = {
-        let imageView = UIImageView(image: Images.PageControlImages.FirstViewImages.spicesImage)
+        let imageView = UIImageView(image: Images.OnboardingImages.FirstViewImages.spicesImage)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -105,7 +105,7 @@ final class FirstLaunchView: UIView {
     }
 }
 
-private extension FirstLaunchView {
+private extension OnboardingView {
     
     func setupUI() {
         backgroundColor = Colors.whiteBackgroundColor

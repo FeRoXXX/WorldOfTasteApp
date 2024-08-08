@@ -1,5 +1,5 @@
 //
-//  FirstLaunchPageViewController.swift
+//  OnboardingPageViewController.swift
 //  WorldOfTasteApp
 //
 //  Created by Александр Федоткин on 24.07.2024.
@@ -9,9 +9,9 @@ import UIKit
 
 typealias PageViewControllerDelegateAndDataSource = UIPageViewControllerDelegate & UIPageViewControllerDataSource
 
-final class FirstLaunchPageViewController: UIPageViewController {
+final class OnboardingPageViewController: UIPageViewController {
     
-    private var controllersPage: [FirstLaunchViewController] = []
+    private var controllersPage: [OnboardingViewController] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +20,9 @@ final class FirstLaunchPageViewController: UIPageViewController {
     }
 }
 
-extension FirstLaunchPageViewController: PageViewControllerDelegateAndDataSource {
+extension OnboardingPageViewController: PageViewControllerDelegateAndDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let contentVC = viewController as? FirstLaunchViewController,
+        guard let contentVC = viewController as? OnboardingViewController,
                       let currentIndex = controllersPage.firstIndex(of: contentVC),
                       currentIndex > 0 else {
                     return nil
@@ -31,7 +31,7 @@ extension FirstLaunchPageViewController: PageViewControllerDelegateAndDataSource
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let contentVC = viewController as? FirstLaunchViewController,
+        guard let contentVC = viewController as? OnboardingViewController,
                       let currentIndex = controllersPage.firstIndex(of: contentVC),
                       currentIndex < controllersPage.count - 1 else {
                     return nil
@@ -40,11 +40,11 @@ extension FirstLaunchPageViewController: PageViewControllerDelegateAndDataSource
     }
 }
 
-private extension FirstLaunchPageViewController {
+private extension OnboardingPageViewController {
     
     func setupViewControllers() {
         for index in 0...2 {
-            let contentVC = FirstLaunchViewController()
+            let contentVC = OnboardingViewController()
             contentVC.setCurrentPage(number: index)
             controllersPage.append(contentVC)
         }
