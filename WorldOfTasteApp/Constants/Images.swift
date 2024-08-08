@@ -12,7 +12,13 @@ enum Images {
         static let arrowRight = UIImage(systemName: "arrow.right")
     }
     
-    enum PageControlImages {
+    enum MainScreenImages {
+        enum HomeScreenImages {
+            static let menuButton = UIImage(named: "MenuButton")
+        }
+    }
+    
+    enum OnboardingImages {
         enum FirstViewImages {
             static let spicesImage = UIImage(named: "SpicesImage")
         }
