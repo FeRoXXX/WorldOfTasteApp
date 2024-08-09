@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         /* для онбординга
-        window.rootViewController = UINavigationController(rootViewController: FirstLaunchPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal))
+        window.rootViewController = UINavigationController(rootViewController: OnboardingPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal))
         window.makeKeyAndVisible()
          */
         

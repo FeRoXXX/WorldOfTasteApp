@@ -1,5 +1,5 @@
 //
-//  FirstLaunchDataManager.swift
+//  OnboardingDataManager.swift
 //  WorldOfTasteApp
 //
 //  Created by Александр Федоткин on 06.08.2024.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FirstLaunchDataManager {
+final class OnboardingDataManager {
     
     private var model: Welcome?
     
@@ -20,7 +20,7 @@ final class FirstLaunchDataManager {
     }
 }
 
-private extension FirstLaunchDataManager {
+private extension OnboardingDataManager {
     
     func fetchData() {
         guard let data = createJSONData()

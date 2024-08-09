@@ -1,5 +1,5 @@
 //
-//  FirstLaunchViewController.swift
+//  OnboardingViewController.swift
 //  WorldOfTasteApp
 //
 //  Created by Александр Федоткин on 24.07.2024.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class FirstLaunchViewController: UIViewController {
+final class OnboardingViewController: UIViewController {
     
-    private let contentView = FirstLaunchView()
-    private let dataManager = FirstLaunchDataManager()
+    private let contentView = OnboardingView()
+    private let dataManager = OnboardingDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ final class FirstLaunchViewController: UIViewController {
     }
 }
 
-private extension FirstLaunchViewController {
+private extension OnboardingViewController {
     
     func setupUI() {
         view = contentView
