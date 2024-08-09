@@ -13,6 +13,7 @@
 		11ECDD822C625479000AA659 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD812C625479000AA659 /* WishListViewController.swift */; };
 		11ECDD862C6254C5000AA659 /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD852C6254C5000AA659 /* PlayViewController.swift */; };
 		11ECDD882C6254EA000AA659 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD872C6254EA000AA659 /* AccountViewController.swift */; };
+		11ECDD8C2C64BCD3000AA659 /* WavyTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ECDD8B2C64BCD3000AA659 /* WavyTopView.swift */; };
 		274103A62C4EC2E9007606C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274103A52C4EC2E9007606C5 /* AppDelegate.swift */; };
 		274103A82C4EC2E9007606C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 274103A72C4EC2E9007606C5 /* SceneDelegate.swift */; };
 		274103B02C4EC2E9007606C5 /* WorldOfTasteApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 274103AE2C4EC2E9007606C5 /* WorldOfTasteApp.xcdatamodeld */; };
@@ -54,6 +55,7 @@
 		11ECDD812C625479000AA659 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		11ECDD852C6254C5000AA659 /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		11ECDD872C6254EA000AA659 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		11ECDD8B2C64BCD3000AA659 /* WavyTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavyTopView.swift; sourceTree = "<group>"; };
 		274103A22C4EC2E9007606C5 /* WorldOfTasteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfTasteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		274103A52C4EC2E9007606C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		274103A72C4EC2E9007606C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				11ECDD782C623667000AA659 /* HomeScreenView.swift */,
+				11ECDD8B2C64BCD3000AA659 /* WavyTopView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				274103D72C510A4B007606C5 /* FirstLaunchView.swift in Sources */,
+				11ECDD8C2C64BCD3000AA659 /* WavyTopView.swift in Sources */,
 				11ECDD822C625479000AA659 /* WishListViewController.swift in Sources */,
 				274104402C624881007606C5 /* PageTextModel.swift in Sources */,
 				274103A62C4EC2E9007606C5 /* AppDelegate.swift in Sources */,
