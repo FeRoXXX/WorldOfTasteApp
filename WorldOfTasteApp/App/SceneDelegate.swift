@@ -15,12 +15,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        /* для онбординга
+        /*для онбординга
         window.rootViewController = UINavigationController(rootViewController: FirstLaunchPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal))
         window.makeKeyAndVisible()
          */
         
-        let menuController = MenuTabBarController()
+        
+         let menuController = MenuTabBarController()
         window.rootViewController = menuController
         window.makeKeyAndVisible()
         
